@@ -99,7 +99,7 @@
 				</main>
 			</div>
 			<!---->
-			<div class="vp-notice-wrapper">
+			<div id="myDiv" class="vp-notice-wrapper">
 				<header class="vp-notice-title">
 					<!---->
 					<span>公告</span>
@@ -109,12 +109,18 @@
 						<br>爱上NAS爱上家！</p>同行竞争可以，请不要照搬我的话术、图片和店铺装修。<span>本文档为原创文档，仅供本店客户使用。</span>
 				</div>
 				<div class="vp-notice-footer">
-					<button type="button" class="vp-notice-footer-action primary">我知道了</button>
+					<button id="myButton" type="button" class="vp-notice-footer-action primary">我知道了</button>
 					<a href="https://item.taobao.com/item.htm?id=725282812681" target="_blank"><button type="button" class="vp-notice-footer-action default">去店铺看看</button></a>
 				</div>
 			</div>
 		</div>
-<script defer="" src="https://nastool.work/assets/js/app.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#myButton").click(function() {
+			$("#myDiv").toggle();
+		});
+	});
+</script>
 
 	</body>
 </html>
