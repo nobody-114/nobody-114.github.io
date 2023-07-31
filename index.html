@@ -142,9 +142,13 @@
 						<iframe src="//player.bilibili.com/player.html?aid=658668147&bvid=BV1ch4y127WK&cid=1202804390&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
 								width="100%" height="450px">-->
 <script>
-function resizeIframe(iframe) {  
-  iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';  
-}
+$(document).ready(function() {  
+    var $iframe = $('iframe');  
+    var iframeDoc = $iframe[0].contentWindow.document;  
+    iframeDoc.open();  
+    iframeDoc.close();  
+    $iframe.height($iframe.width() * (16/9));  
+});
 </script>
 
 <iframe src="//player.bilibili.com/player.html?aid=658668147&bvid=BV1ch4y127WK&cid=1202804390&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"  
